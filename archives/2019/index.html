@@ -669,9 +669,33 @@
 
   
   
-  <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
 
 
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: 'xz95aYv6IkTAl93wnUui0RyF-gzGzoHsz',
+    appKey: 'WANDVPHITb2GklMTRjdjpTTS',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
 
 
 
